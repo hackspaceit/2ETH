@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "",
+  defaultNetwork: "https://base-mainnet.alchemyapi.io/v2/${providerApiKey}",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
