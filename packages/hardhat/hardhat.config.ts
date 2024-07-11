@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "base",
+  defaultNetwork: "Base",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
