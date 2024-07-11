@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "https://basescan.org",
+  defaultNetwork: "base",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -119,12 +119,12 @@ const config: HardhatUserConfig = {
     },
   },
   // configuration for harhdat-verify plugin
-  etherscan: {
+  basescan: {
     apiKey: `${basescanApiKey}`,
   },
   // configuration for etherscan-verify from hardhat-deploy plugin
   verify: {
-    etherscan: {
+    basescan: {
       apiKey: `${basescanApiKey}`,
     },
   },
