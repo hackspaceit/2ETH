@@ -29,11 +29,11 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "Base",
+  defaultNetwork: "Basescan",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
-      default: 8453,
+      default: 0,
     },
   },
   networks: {
