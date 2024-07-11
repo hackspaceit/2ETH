@@ -16,7 +16,7 @@ const providerApiKey = "process.env.ALCHEMY_API_KEY";
 // If not set, it uses the hardhat account 0 private key.
 const deployerPrivateKey = "process.env.DEPLOYER_PRIVATE_KEY";
 // If not set, it uses ours Etherscan default API key.
-const etherscanApiKey = "process.env.BASESCAN_API_KEY";
+const etherscanApiKey = "process.env.ETHERSCAN_API_KEY";
 
 const config: HardhatUserConfig = {
   solidity: {
