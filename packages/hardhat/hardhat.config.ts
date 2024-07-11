@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "https://base-mainnet.alchemyapi.io/v2/${providerApiKey}",
+  defaultNetwork: "localhost",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -42,7 +42,7 @@ const config: HardhatUserConfig = {
     hardhat: {
       forking: {
         url: `https://base-mainnet.alchemyapi.io/v2/${providerApiKey}`,
-        enabled: process.env.MAINNET_FORKING_ENABLED === "true",
+        enabled: process.env.MAINNET_FORKING_ENABLED === "false",
       },
     },
     mainnet: {
