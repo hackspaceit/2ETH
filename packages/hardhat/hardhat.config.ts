@@ -16,7 +16,7 @@ const providerApiKey = "process.env.ALCHEMY_API_KEY";
 // If not set, it uses the hardhat account 0 private key.
 const deployerPrivateKey = "process.env.DEPLOYER_PRIVATE_KEY";
 // If not set, it uses ours Etherscan default API key.
-const etherscanApiKey = "process.env.ETHERSCAN_API_KEY";
+const basescanApiKey = "process.env.BASESCAN_API_KEY";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "localhost",
+  defaultNetwork: "https://basescan.org",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -41,7 +41,7 @@ const config: HardhatUserConfig = {
     // If the network you are looking for is not here you can add new network settings
     hardhat: {
       forking: {
-        url: `https://eth-mainnet.alchemyapi.io/v2/${providerApiKey}`,
+        url: `https://base-mainnet.alchemyapi.io/v2/${providerApiKey}`,
         enabled: process.env.MAINNET_FORKING_ENABLED === "false",
       },
     },
@@ -120,12 +120,12 @@ const config: HardhatUserConfig = {
   },
   // configuration for harhdat-verify plugin
   etherscan: {
-    apiKey: `${etherscanApiKey}`,
+    apiKey: `${basescanApiKey}`,
   },
   // configuration for etherscan-verify from hardhat-deploy plugin
   verify: {
     etherscan: {
-      apiKey: `${etherscanApiKey}`,
+      apiKey: `${basescanApiKey}`,
     },
   },
   sourcify: {
