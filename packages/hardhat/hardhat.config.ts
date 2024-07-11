@@ -16,7 +16,7 @@ const providerApiKey = "process.env.ALCHEMY_API_KEY";
 // If not set, it uses the hardhat account 0 private key.
 const deployerPrivateKey = "process.env.DEPLOYER_PRIVATE_KEY";
 // If not set, it uses ours Etherscan default API key.
-const basescanApiKey = "process.env.BASESCAN_API_KEY";
+const etherscanApiKey = "process.env.BASESCAN_API_KEY";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -29,7 +29,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: "base-mainnet",
+  defaultNetwork: "localhost",
   namedAccounts: {
     deployer: {
       // By default, it will take the first Hardhat account as the deployer
@@ -120,12 +120,12 @@ const config: HardhatUserConfig = {
   },
   // configuration for harhdat-verify plugin
   etherscan: {
-    apiKey: `${basescanApiKey}`,
+    apiKey: `${etherscanApiKey}`,
   },
   // configuration for etherscan-verify from hardhat-deploy plugin
   verify: {
     etherscan: {
-      apiKey: `${basescanApiKey}`,
+      apiKey: `${etherscanApiKey}`,
     },
   },
   sourcify: {
