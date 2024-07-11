@@ -42,7 +42,7 @@ export const Address = ({ address, disableAddressLink, format, size = "base" }: 
 
   const { data: fetchedEns } = useEnsName({
     address: checkSumAddress,
-    chainId: 1,
+    chainId: 8453,
     query: {
       enabled: isAddress(checkSumAddress ?? ""),
     },
